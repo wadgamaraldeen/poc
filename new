@@ -1,6 +1,8 @@
 .git
 .env
 .SVN
+web.config
+.htaccess
 console.php
 admin/console.php
 administrator/console.php
