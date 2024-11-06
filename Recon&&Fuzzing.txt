@@ -1,0 +1,56 @@
+## Recon :-
+
+- subfinder
+
+subfinder -dL domains.txt -o subfinder.txt
+
+subfinder -d zizoo.com -o subfinder.txt
+
+
+- cat domains.txt | assetfinder --subs-only > asset.txt
+
+- amass
+
+go install -v github.com/OWASP/Amass/v3/...@master
+
+amass enum -passive -norecursive -noalts -df domains.txt -o amass.txt
+
+amass enum -df domains.txt -o amass.txt
+
+
+- crtfinder
+
+python3 crtfinder.py -u atmail.com
+
+
+- sublist3r
+
+sublist3r -d appfluence.com -o sublist3r.txt
+
+
+- site:*.appfluence.com -site:www.appfluence.com
+
+
+
+- # Merging subdomains into one file :- all-subs.txt
+
+cat amass.txt subfinder.txt gobuster_subs.txt other.txt | anew all-subs.txt
+
+
+- cat all-subs.txt | httpx -o live-subs.txt
+
+httpx -sc -fr -cl -server -title -o output
+
+
+- cat live-subs.txt | dirsearch --stdin 
+
+
+- also ffuf :-
+
+ffuf -u https://www.workramp.com/FUZZ -w wordlist.txt -mc 200,403,301,302 -c true -v -o output.txt
+
+
+
+
+
+

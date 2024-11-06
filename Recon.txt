@@ -21,10 +21,6 @@ go install -v github.com/OWASP/Amass/v3/...@master
 amass enum -passive -norecursive -noalts -df domains.txt -o amass.txt
 
 
-
-chaos -d uber.com -o chaos.txt
-
-
 - crtfinder
 
 python3 crtfinder.py -u alloyhome.com
