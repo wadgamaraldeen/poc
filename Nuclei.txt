@@ -1,0 +1,12 @@
+## Running Nuclei :-
+
+Scanning target domain with community-curated nuclei templates :-
+
+- nuclei -u https://example.com
+
+- nuclei -list urls.txt -t /fuzzing-templates
+
+- nuclei -list live-subs.txt -t /root/nuclei-templates/vulnerabilities -t /root/nuclei-templates/cves -t /root/nuclei-templates/exposures -t /root/nuclei-templates/sqli.yaml
+
+- nuclei -u https://example.com -w workflows/
+

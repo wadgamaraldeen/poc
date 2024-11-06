@@ -1,0 +1,24 @@
+##################################  FFUF  ##################################################
+
+ffuf -u https://251.32.4.146.static.wline.lns.sme.cust.swisscom.ch/FUZZ -w wordlist.txt -mc 200,403,301,302 -c true -v
+
+
+
+-------------------------------------------------------------------------------------
+
+Bruteforcing #subdomains using a wordlist :-
+
+Tips:-
+
+ffuf -u "https://FUZZ.cameyo.com"-w <path_to_wordlist> -mc 200,301,302,403
+
+Best DNS wordlist :-
+
+https://wordlists-cdn.assetnote.io/data/manual/best-dns-wordlist.txt
+
+
+
+
+
+
+

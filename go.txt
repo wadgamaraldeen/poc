@@ -1,0 +1,53 @@
+rm -rf /usr/local/go
+
+tar -C /usr/local -xzf go.
+
+
+
+nano .zshrc 
+
+nano ~/.zshrc 
+
+export GOPATH=/root/go
+export GOROOT=/usr/local/go
+PATH=$PATH:$GOROOT/bin/:$GOPATH/bin
+
+source .zshrc
+
+source ~/.zshrc
+
+go install -v github.com/owasp-amass/amass/v3/...@master
+
+go install -v github.com/tomnomnom/anew@latest
+
+go install -v github.com/LukaSikic/subzy@latest
+
+go install github.com/tomnomnom/assetfinder@latest
+
+GO111MODULE=on go install github.com/dwisiswant0/crlfuzz/cmd/crlfuzz@latest
+
+go install -v github.com/LukaSikic/subzy@latest
+
+go install github.com/tomnomnom/waybackurls@latest
+
+https://github.com/tomnomnom/qsreplace
+
+go install github.com/Emoe/kxss@latest
+
+go install github.com/tomnomnom/qsreplace@latest
+
+go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+
+go install github.com/haccer/subjack@latest
+
+go install github.com/projectdiscovery/httpx/cmd/httpx@latest
+
+go install github.com/tomnomnom/httprobe@latest
+
+go install github.com/lc/gau/v2/cmd/gau@latest
+
+go install github.com/tomnomnom/gf@latest
+
+
+
+

