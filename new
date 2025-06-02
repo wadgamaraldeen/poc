@@ -1,3 +1,16 @@
+phpmyadmin/yarn.lock
+phpmyadmin/index.php
+phpmyadmin/setup
+phpmyadmin/vendor/composer/installed.json
+phpmyadmin/package.json
+phpmyadmin/composer.lock
+phpmyadmin/composer.json
+phpmyadmin/ChangeLog
+node_modules
+vendor/google/auth/src/CredentialSource
+vendor/google/auth/src
+vendor/composer
+vendor
 keys.js
 secrets.json
 secret.env
